@@ -2,7 +2,7 @@
   "notebook": [
     {
       "timestamp" : 1595120137260,
-      "msg": "First notebook text for testing ",
+      "msg": "Notebook",
       "addtitionalText": "phone number"
     },
     {
@@ -77,7 +77,7 @@
     },
     {
       "timestamp" : 1595627831360,
-      "msg": "",
+      "msg": "First notebook text for testing",
       "addtitionalText": ""
     },
     {
