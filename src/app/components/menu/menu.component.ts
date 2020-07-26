@@ -32,4 +32,8 @@ export class MenuComponent implements OnInit {
     this.globalService.notebookBoxClicked();
   }
 
+  expandCollapse(condition) {
+    this.globalService.isExtand = condition;
+  }
+
 }

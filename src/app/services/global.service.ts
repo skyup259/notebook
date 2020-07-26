@@ -12,6 +12,7 @@ export class GlobalService {
   notebookIndex = 0;
   currentTime: any;
   searchInput = '';
+  isExtand = true;
   // deployment 'assets/data.json';
   private jsonIndexLocation = '../../assets/data.json';
 

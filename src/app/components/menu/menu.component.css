@@ -46,6 +46,14 @@ input:focus .form-check-input {
     visibility: visible;
   }
 
+  .collapseIcon:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .extandIcon:hover .tooltiptext {
+    visibility: visible;
+  }
+
   .fit-content {
       max-width: 90%;
   }

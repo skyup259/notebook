@@ -1,6 +1,6 @@
 <div class="content" role="main">
   <div class="card-container">
-    <div class="side-nav">
+    <div class="side-nav" [ngClass]="{'isExtanded' : !globalService.isExtand}">
       <div class="side-nav-content">
         <div *ngIf="globalService.notebookData">
             <div *ngFor="let notebook of globalService.notebookData['notebook'] | search: globalService.searchInput; let idx=index">
@@ -17,7 +17,7 @@
 
       </div>
     </div>
-    <div class="main-nav">
+    <div class="main-nav" *ngIf="globalService.isExtand">
       <div>
         <p class="extended-date-timestamp"> {{globalService.notebookData['notebook'][globalService.notebookIndex].timestamp | date :'MMMM d, y'}} at {{globalService.notebookData['notebook'][globalService.notebookIndex].timestamp | date :' h:mm a'}}</p>
         <textarea class="extended-data-text" [(ngModel)]="globalService.notebookData['notebook'][globalService.notebookIndex].msg"> {{globalService.notebookData['notebook'][globalService.notebookIndex].msg}}</textarea>

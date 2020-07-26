@@ -9,6 +9,10 @@
   overflow-y : scroll;
 }
 
+.isExtanded {
+  width: 100%;
+}
+
 .side-nav-content {
   overflow-y: auto;
 }
