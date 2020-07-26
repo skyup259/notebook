@@ -74,13 +74,6 @@ textarea {
   text-overflow: ellipsis !important;
 }
 
-/* .second-line-ellipsis{
-  width: 90%;
-  white-space: nowrap;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-} */
-
 ::-webkit-scrollbar {
   width: 20px;
 }
@@ -95,10 +88,6 @@ textarea {
     background-clip: padding-box;
     -webkit-border-radius: 10px;
 }
-
-/* ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
-} */
 
 .content-box:hover {
   background: #efefc7;

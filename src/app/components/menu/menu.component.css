@@ -57,3 +57,13 @@ input:focus .form-check-input {
   .fit-content {
       max-width: 90%;
   }
+
+  @media screen and (max-device-width: 480px){
+    .not-on-mobile {
+      display:none;
+    }
+
+    .card-container {
+      display: flex;
+    }
+  }

@@ -19,6 +19,11 @@ export class MainComponent implements OnInit {
       this.globalService.notebookData = JSON.parse(localStorage.getItem('data'));
       this.globalService.notebookData['notebook'].sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
     }
+
+    if(screen.width < 480) {
+      this.globalService.isExtand = false;
+    }
+    this.globalService.screenWidth = screen.width;
   }
 
   showDateTime (recorddate) {

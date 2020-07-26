@@ -8,13 +8,13 @@ import { map } from 'rxjs/operators';
 })
 export class GlobalService {
   notebookData = {};
-  checking = '';
   notebookIndex = 0;
   currentTime: any;
   searchInput = '';
   isExtand = true;
+  screenWidth: number;
   // deployment 'assets/data.json';
-  private jsonIndexLocation = '../../assets/data.json';
+  private jsonIndexLocation = 'assets/data.json';
 
   constructor(public httpClient: HttpClient) { }
 
