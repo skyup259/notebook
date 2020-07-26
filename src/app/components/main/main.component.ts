@@ -7,7 +7,7 @@ import { GlobalService } from '../../services/global.service';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-  check = "fsdafshdkjfhsda"
+  dataStatus: string;
 
   constructor(public globalService: GlobalService) { }
 
@@ -32,6 +32,19 @@ export class MainComponent implements OnInit {
 
   upateChangeData(): void {
     localStorage.setItem('data', JSON.stringify(this.globalService.notebookData))
+  }
+
+  showDateTime (recorddate) {
+    const diff = Date.now()-recorddate;
+    if(diff <= 86400000) {
+      this.dataStatus = 'h:mm a';
+    } else if(diff <= 604800000) {
+      this.dataStatus = 'EEEE';
+    } else {
+      this.dataStatus = 'MM/d/yyyy';
+    }
+
+    return true
   }
 
 }

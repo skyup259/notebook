@@ -1,7 +1,7 @@
 {
   "notebook": [
     {
-      "timestamp" : 2595920137260,
+      "timestamp" : 1595120137260,
       "msg": "First notebook text for testing ",
       "addtitionalText": "phone number"
     },
@@ -71,7 +71,7 @@
       "addtitionalText": "important document"
     },
     {
-      "timestamp" : 2295625731360,
+      "timestamp" : 1561225731360,
       "msg": "off into the jungle.",
       "addtitionalText": ""
     },
@@ -81,7 +81,7 @@
       "addtitionalText": ""
     },
     {
-      "timestamp" : 1597325731360,
+      "timestamp" : 1595627631360,
       "msg": "random text",
       "addtitionalText": "Testing additional text long text"
     }
