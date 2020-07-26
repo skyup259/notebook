@@ -1,0 +1,21 @@
+.form-check-input {
+    background: transparent;
+}
+
+.container {
+    min-height: 45px;
+    padding: 5px;
+}
+
+input:focus .form-check-input {
+    text-align: left;
+}
+
+.form-check-input {
+    text-align: center;
+}
+
+.bi-search {
+    margin-top: 10px;
+    margin-left: -9px;
+}

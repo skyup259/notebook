@@ -1,0 +1,29 @@
+<div class="content" role="main">
+  <div class="card-container">
+    <div class="side-nav">
+      <div class="side-nav-content">
+        <div *ngIf="globalService.notebookData">
+            <div *ngFor="let notebook of globalService.notebookData['notebook'] | search: globalService.searchInput; let idx=index">
+            <div class="content-box"  (click)="notebookBoxClicked(idx)">
+              <div class="data-text-ellipsis"><p class="data-text"><b>{{notebook.msg}}</b></p> </div>
+              <div class="second-line-ellipsis">
+                <p class="timestamp" *ngIf="(globalService.currentTime - notebook.timestamp) < 3600">{{notebook.timestamp | date :'h:mm a'}}</p>
+                <p class="timestamp" *ngIf="(globalService.currentTime - notebook.timestamp) < 25200 && (globalService.currentTime - notebook.timestamp) > 3600">{{notebook.timestamp | date :'EEEE'}}</p>
+                <p class="timestamp" *ngIf="(globalService.currentTime - notebook.timestamp) > 25200">{{notebook.timestamp | date :'MM/d/yy'}}</p>
+                <p class="additional-text" *ngIf="notebook.addtitionalText">{{notebook.addtitionalText}}</p>
+                <p class="additional-text" *ngIf="!notebook.addtitionalText">No Additional Text</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="main-nav">
+      <div>
+        <p class="extended-date-timestamp"> {{globalService.notebookData['notebook'][globalService.notebookIndex].timestamp | date :'MMMM d, y'}} at {{globalService.notebookData['notebook'][globalService.notebookIndex].timestamp | date :' h:mm a'}}</p>
+        <textarea class="extended-data-text" [(ngModel)]="globalService.notebookData['notebook'][globalService.notebookIndex].msg"> {{globalService.notebookData['notebook'][globalService.notebookIndex].msg}}</textarea>
+      </div>
+    </div>
+  </div>
+</div>
