@@ -27,4 +27,15 @@ export class GlobalService {
     );
   }
 
+  notebookBoxClicked(): void {
+    if( JSON.stringify(this.notebookData) !== localStorage.getItem('data')) {
+      this.notebookData['notebook'][this.notebookIndex].timestamp = Date.now();
+      this.upateChangeData();
+    }
+  }
+
+  upateChangeData(): void {
+    localStorage.setItem('data', JSON.stringify(this.notebookData))
+  }
+
 }

@@ -5,7 +5,7 @@
 
 .side-nav {
   width: 25%;
-  height: 700px;
+  height: 670px;
   overflow-y : scroll;
 }
 
@@ -15,7 +15,7 @@
 
 .main-nav {
   width: 75%;
-  height: 680;
+  height: 670;
   overflow-y : scroll;
   border: 1px solid #e5e5e5;
   background: #f5f6f0;

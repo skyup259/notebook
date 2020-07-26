@@ -4,7 +4,7 @@
       <div class="side-nav-content">
         <div *ngIf="globalService.notebookData">
             <div *ngFor="let notebook of globalService.notebookData['notebook'] | search: globalService.searchInput; let idx=index">
-            <div class="content-box"  (click)="notebookBoxClicked(idx)">
+            <div class="content-box"  (click)="updateSelectedIndex(idx)">
               <div class="data-text-ellipsis"><p class="data-text"><b>{{notebook.msg}}</b></p> </div>
               <div class="second-line-ellipsis">
                 <p class="timestamp" *ngIf="showDateTime(notebook.timestamp)">{{notebook.timestamp | date :dataStatus}}

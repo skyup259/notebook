@@ -28,4 +28,8 @@ export class MenuComponent implements OnInit {
     this.globalService.notebookData['notebook'].unshift(note);
   }
 
+  save() {
+    this.globalService.notebookBoxClicked();
+  }
+
 }

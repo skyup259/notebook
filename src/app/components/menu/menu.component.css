@@ -2,7 +2,7 @@
     background: transparent;
 }
 
-.container {
+.card-container {
     min-height: 45px;
     padding: 5px;
 }
@@ -31,7 +31,7 @@ input:focus .form-check-input {
     position: absolute;
     z-index: 1;
     top: 20px;
-    left: -20px;
+    left: 15px;
   }
   
   .deleteIcon:hover .tooltiptext {
@@ -40,4 +40,12 @@ input:focus .form-check-input {
 
   .newIcon:hover .tooltiptext {
     visibility: visible;
+  }
+
+  .saveIcon:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .fit-content {
+      max-width: 90%;
   }

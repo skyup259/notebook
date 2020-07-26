@@ -21,19 +21,6 @@ export class MainComponent implements OnInit {
     }
   }
 
-  notebookBoxClicked(index): void {
-    if( JSON.stringify(this.globalService.notebookData) !== localStorage.getItem('data')) {
-      this.globalService.notebookData['notebook'][this.globalService.notebookIndex].timestamp = Date.now();
-      this.upateChangeData();
-    }
-    
-    this.globalService.notebookIndex = index;
-  }
-
-  upateChangeData(): void {
-    localStorage.setItem('data', JSON.stringify(this.globalService.notebookData))
-  }
-
   showDateTime (recorddate) {
     const diff = Date.now()-recorddate;
     if(diff <= 86400000) {
@@ -45,6 +32,10 @@ export class MainComponent implements OnInit {
     }
 
     return true
+  }
+
+  updateSelectedIndex(idx) {
+    this.globalService.notebookIndex = idx;
   }
 
 }
